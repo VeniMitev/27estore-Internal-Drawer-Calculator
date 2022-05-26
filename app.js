@@ -14,33 +14,30 @@ const priceLog = async () => {
     console.log(drawerPrices)
 }
 
-
-
 const main = async () => {
     drawerPrices = await getPrices();
     
     let cabWidth = document.getElementById('cabWidth').value;
-    let drawerMaterial = document.getElementById('drawerFinish').value;
+    let configPrice = document.getElementById('configPrice').value;
     let twoInch = document.getElementById('twoInch').value;
     let fourInch = document.getElementById('fourInch').value;
     let sevenInch = document.getElementById('sevenInch').value;
-    let configPrice = document.getElementById('configPrice').value;
-
-    // console.log(drawerPrices[12][4]["Aspen"])
+    let drawerMaterial = document.getElementById('drawerFinish').value;
 
     const calcTotal = (width, material) => {
-        let priceA = drawerPrices[width][2][material];
-        let priceB = drawerPrices[width][4][material];
-        let priceC = drawerPrices[width][7][material];
+        let drawer = (a) => {
+            let price = drawerPrices[width][a][material];
+        
+            if (isNaN(price)) price = 0;
 
-        let drawerA = priceA * twoInch;
-        let drawerB = priceB * fourInch;
-        let drawerC = priceC * sevenInch;
+            return price;
+        }
 
-        let drawerTotal = drawerA + drawerB + drawerC;
+        let drawerTotal = (drawer(2) * twoInch) + (drawer(4) * fourInch) + (drawer(7) * sevenInch);
+
         let total = parseFloat(drawerTotal) + parseFloat(configPrice);
 
-        document.getElementById('drawerTotal').innerHTML = `$${drawerTotal}`;
+        document.getElementById('drawerTotal').innerHTML = `$${drawerTotal.toFixed(2)}`;
         document.getElementById('total').innerHTML = `$${total.toFixed(2)}`
     }
     
