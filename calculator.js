@@ -14,10 +14,11 @@ const priceLog = async () => {
     console.log(drawerPrices)
 }
 
-const main = async (event) => {
-    drawerPrices = await getPrices();
-    event.preventDefault();
 
+
+const main = async () => {
+    drawerPrices = await getPrices();
+    
     let cabWidth = document.getElementById('cabWidth').value;
     let drawerMaterial = document.getElementById('drawerFinish').value;
     let twoInch = document.getElementById('twoInch').value;
@@ -25,11 +26,24 @@ const main = async (event) => {
     let sevenInch = document.getElementById('sevenInch').value;
     let configPrice = document.getElementById('configPrice').value;
 
-    console.log(cabWidth);
-    console.log(drawerMaterial);
-    console.log(twoInch);
-    console.log(fourInch);
-    console.log(sevenInch);
-    console.log(configPrice);
+    // console.log(drawerPrices[12][4]["Aspen"])
+
+    const calcTotal = (width, material) => {
+        let priceA = drawerPrices[width][2][material];
+        let priceB = drawerPrices[width][4][material];
+        let priceC = drawerPrices[width][7][material];
+
+        let drawerA = priceA * twoInch;
+        let drawerB = priceB * fourInch;
+        let drawerC = priceC * sevenInch;
+
+        let drawerTotal = drawerA + drawerB + drawerC;
+        let total = parseFloat(drawerTotal) + parseFloat(configPrice);
+
+        document.getElementById('drawerTotal').innerHTML = `$${drawerTotal}`;
+        document.getElementById('total').innerHTML = `$${total}`
+    }
+    
+    calcTotal(cabWidth, drawerMaterial)
 
 }

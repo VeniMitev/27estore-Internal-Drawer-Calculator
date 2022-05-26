@@ -5,8 +5,64 @@
 
 div {
     margin: 1em;
+    text-align: center;
 }
 
 label {
     margin-bottom: 0.5em;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#configPrice::before {
+    content: "$";
+}
+
+form {
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+form {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+}
+
+form {
+    background: linear-gradient(0.30turn, steelblue, lightblue);
+    /* border: solid red 0.25em; */
+    border-radius: 1em;
+}
+
+input {
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 10em;
+    height: 2rem;
+    border: 0.1em solid black;
+    border-radius: 0.5em;
+}
+
+select {
+    text-align: center;
+    font-size: 1.5rem;
+    height: 2rem;
+    border: 0.1em solid black;
+    border-radius: 0.5em;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    background-color: white;
+    color: black;
+    border: 0.1em solid black;
+    border-radius: 0.5em;
+    transition: drop-shadow .500ms ease;
 }

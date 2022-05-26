@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <form onsubmit="main()" >
+    <form onsubmit="event.preventDefault();">
         <div>
-            <label for="cabWidth"> Cabinet Width: </label><br>
+            <label for="cabWidth">Cabinet Width:</label><br>
             <select name="cars" id="cabWidth">
                 <option value="12">12</option>
                 <option value="15">15</option>
@@ -28,11 +28,11 @@
             </select>
         </div>
         <div>
-            <label for="configPrice">Configured Price: </label><br>
-            <input placeholder="$0" type="number" id="configPrice">
+            <label for="configPrice">Configured Price:</label><br>
+            <input placeholder="$0" type="number" id="configPrice" step="any">
         </div>
         <div>
-            <label for="twoInch">2.5 Inch Shelves: </label><br>
+            <label for="twoInch">2.5 Inch Shelves:</label><br>
             <input placeholder="0" type="number" id="twoInch">
         </div>
         <div>
@@ -55,11 +55,19 @@
                 <option value="Legrabox Grey">Legrabox Grey</option>
                 <option value="Legrabox Black">Legrabox Black</option>
             </select>
-            <p id="drawerTotal">$500</p>
         </div>
-        <button type="submit">Calculate</button>
 
-        <p id="total">$5000</p>
+        <div>
+            <label for="drawerTotal">Customization Total:<label><br>
+            <span id="drawerTotal">$0</span>
+        </div>
+        <button onclick="main()">Calculate!</button>
+
+        <div>
+            <label for="total">Grand Total:<label><br>
+            <span id="total">$0</span>
+        </div>
+        
 
     </form>
 
