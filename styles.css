@@ -51,7 +51,7 @@ input {
     width: 10em;
     height: 2.5rem;
     border: 0.1em solid black;
-    border-radius: 0.5em;
+    border-radius: 0.25em;
 }
 
 select {
@@ -60,7 +60,7 @@ select {
     height: 2.5rem;
     width: 10em;
     border: 0.1em solid black;
-    border-radius: 0.5em;
+    border-radius: 0.25em;
 }
 
 button {
@@ -71,7 +71,7 @@ button {
     background-color: white;
     color: black;
     border: 0.1em solid black;
-    border-radius: 0.5em;
+    border-radius: 0.25em;
     transition: drop-shadow .500ms ease;
 }
 
