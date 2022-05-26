@@ -1,5 +1,5 @@
 const getPrices = async () => {
-    const requestURL = './drawer-prices-2.json';
+    const requestURL = './drawer-prices.json';
     const request = new Request(requestURL);
   
     const response = await fetch(request);
