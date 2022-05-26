@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <h1>Internal Drawer Calculator</h1>
     <form onsubmit="event.preventDefault();">
         <div>
             <label for="cabWidth">Cabinet Width:</label><br>
@@ -28,20 +29,20 @@
             </select>
         </div>
         <div>
-            <label for="configPrice">Configured Price:</label><br>
-            <input placeholder="$0" type="number" id="configPrice" step="any">
+            <label for="configPrice">Configured Price</label><br>
+            <input value="0" type="number" id="configPrice" step="any">
         </div>
         <div>
-            <label for="twoInch">2.5 Inch Shelves:</label><br>
-            <input placeholder="0" type="number" id="twoInch">
+            <label for="twoInch">2.5 Inch Shelves</label><br>
+            <input value="0"  type="number" id="twoInch">
         </div>
         <div>
-            <label for="fourInch">4 Inch Drawers (Legrabox M):</label><br>
-            <input placeholder="0" type="number" id="fourInch">
+            <label for="fourInch">4 Inch Drawers<br>(Legrabox M)</label><br>
+            <input value="0"  type="number" id="fourInch">
         </div>
         <div>
-            <label for="sevenInch">7 Inch Drawers (Legrabox C):</label><br>
-            <input placeholder="0" type="number" id="sevenInch">
+            <label for="sevenInch">7 Inch Drawers<br>(Legrabox C)</label><br>
+            <input value="0"  type="number" id="sevenInch">
         </div>
         <div>
             <label for="drawerFinish">Drawer Material:</label><br>
@@ -59,11 +60,11 @@
         <button onclick="main()">Calculate!</button>
         <div>
             <label for="drawerTotal">Drawer Only Total:<label><br>
-            <span id="drawerTotal">$0</span>
+            <span id="drawerTotal">$0.00</span>
         </div>
         <div>
             <label for="total">Grand Total:<label><br>
-            <span id="total">$0</span>
+            <span id="total">$0.00</span>
         </div>
     </form>
 
