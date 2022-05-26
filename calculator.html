@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Drawer Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <form onsubmit="main()" >
+        <div>
+            <label for="cabWidth"> Cabinet Width: </label><br>
+            <select name="cars" id="cabWidth">
+                <option value="12">12</option>
+                <option value="15">15</option>
+                <option value="18">18</option>
+                <option value="21">21</option>
+                <option value="24">24</option>
+                <option value="27">27</option>
+                <option value="30">30</option>
+                <option value="33">33</option>
+                <option value="36">36</option>
+                <option value="39">39</option>
+                <option value="42">42</option>
+                <option value="45">45</option>
+                <option value="48">48</option>
+            </select>
+        </div>
+        <div>
+            <label for="configPrice">Configured Price: </label><br>
+            <input placeholder="$0" type="number" id="configPrice">
+        </div>
+        <div>
+            <label for="twoInch">2.5 Inch Shelves: </label><br>
+            <input placeholder="0" type="number" id="twoInch">
+        </div>
+        <div>
+            <label for="fourInch">4 Inch Drawers (Legrabox M):</label><br>
+            <input placeholder="0" type="number" id="fourInch">
+        </div>
+        <div>
+            <label for="sevenInch">7 Inch Drawers (Legrabox C):</label><br>
+            <input placeholder="0" type="number" id="sevenInch">
+        </div>
+        <div>
+            <label for="drawerFinish">Drawer Material:</label><br>
+            <select name="cars" id="drawerFinish">
+                <option value="Aspen">Aspen</option>
+                <option value="Birch">Birch</option>
+                <option value="Cherry">Cherry</option>
+                <option value="Maple">Maple</option>
+                <option value="Walnut">Walnut</option>
+                <option value="Legrabox White">Legrabox White</option>
+                <option value="Legrabox Grey">Legrabox Grey</option>
+                <option value="Legrabox Black">Legrabox Black</option>
+            </select>
+            <p id="drawerTotal">$500</p>
+        </div>
+        <button type="submit">Calculate</button>
+
+        <p id="total">$5000</p>
+
+    </form>
+
+    <script src="./calculator.js"></script>
+</body>
+</html>
