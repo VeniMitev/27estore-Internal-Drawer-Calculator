@@ -8,12 +8,6 @@ const getPrices = async () => {
     return data;
 }
 
-const priceLog = async () => {
-    drawerPrices = await getPrices();
-
-    console.log(drawerPrices)
-}
-
 const main = async () => {
     drawerPrices = await getPrices();
     
@@ -42,5 +36,4 @@ const main = async () => {
     }
     
     calcTotal(cabWidth, drawerMaterial)
-
 }
