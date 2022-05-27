@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Drawer Calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Internal Drawer Calculator</h1>
+    <form onsubmit="event.preventDefault();">
+        <div>
+            <label for="cabWidth">Cabinet Width:</label><br>
+            <select name="cabWidth" id="cabWidth">
+                <option value="12">12</option>
+                <option value="15">15</option>
+                <option value="18">18</option>
+                <option value="21">21</option>
+                <option value="24">24</option>
+                <option value="27">27</option>
+                <option value="30">30</option>
+                <option value="33">33</option>
+                <option value="36">36</option>
+                <option value="39">39</option>
+                <option value="42">42</option>
+                <option value="45">45</option>
+                <option value="48">48</option>
+            </select>
+        </div>
+        <div>
+            <label for="configPrice">Configured Price</label><br>
+            <input value="0" type="number" id="configPrice" step="any">
+        </div>
+        <div>
+            <label for="twoInch">2.5 Inch Shelves</label><br>
+            <input value="0" type="number" id="twoInch">
+        </div>
+        <div>
+            <label for="fourInch">4 Inch Drawers<br>(Legrabox M)</label><br>
+            <input value="0" type="number" id="fourInch">
+        </div>
+        <div>
+            <label for="sevenInch">7 Inch Drawers<br>(Legrabox C)</label><br>
+            <input value="0"  type="number" id="sevenInch">
+        </div>
+        <div>
+            <label for="drawerFinish">Drawer Material:</label><br>
+            <select name="cars" id="drawerFinish">
+                <option value="Aspen">Aspen</option>
+                <option value="Birch">Birch</option>
+                <option value="Cherry">Cherry</option>
+                <option value="Maple">Maple</option>
+                <option value="Walnut">Walnut</option>
+                <option value="LegraWh">Legrabox White</option>
+                <option value="LegraGr">Legrabox Grey</option>
+                <option value="LegraBlk">Legrabox Black</option>
+            </select>
+        </div>
+        <button onclick="main()">Calculate!</button>
+        <div>
+            <label for="drawerTotal">Drawer Only Total:<label><br>
+            <span id="drawerTotal">$0.00</span>
+        </div>
+        <div class="grand-total">
+            <label for="total"><h3>Grand Total:</h3><label>
+            <span id="total"><h3>$0.00</h3></span>
+        </div>
+    </form>
+
+    <script src="./app.js"></script>
+</body>
+</html>

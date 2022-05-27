@@ -38,7 +38,7 @@ const main = async () => {
         let total = parseFloat(drawerTotal) + parseFloat(configPrice);
 
         document.getElementById('drawerTotal').innerHTML = `$${drawerTotal.toFixed(2)}`;
-        document.getElementById('total').innerHTML = `$${total.toFixed(2)}`
+        document.getElementById('total').innerHTML = `<h3>$${total.toFixed(2)}</h3>`
     }
     
     calcTotal(cabWidth, drawerMaterial)

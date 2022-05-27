@@ -34,7 +34,7 @@ form {
   
 form {
     display: block;
-    width: 25em;
+    width: fit-content;
     height: fit-content;
 }
 
@@ -78,3 +78,42 @@ button {
 button:hover {
     filter: drop-shadow(0.1em 0.1em 0.2em rgba(0, 0, 0, 0.25));
 }
+
+/* .grand-total {
+    display: block;
+    background-color: whitesmoke;
+    width: 100%;
+    text-align: center;
+    border: 0.15em solid black;
+    border-radius: 0.25em;
+} */
+
+.grand-total label {
+    margin-bottom: 0;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(10em, 25em)) ;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(5em, 20em));
+        grid-template-rows: auto;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(5em, 20em));
+        grid-template-rows: auto;
+        place-items: center;
+    }
+}
+
