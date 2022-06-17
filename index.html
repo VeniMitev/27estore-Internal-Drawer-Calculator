@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Internal Drawer Calculator</h1>
-    <form onsubmit="event.preventDefault();">
+    <form onchange="event.preventDefault(); main()">
 
         <div class="grid-3">
             <div>
@@ -93,9 +93,6 @@
                     <option value="8">8</option>
                     <option value="9">9</option>
                 </select>
-            </div>
-            <div>
-                <button onclick="main()">Calculate!</button>
             </div>
             <div>
                 <label for="drawerTotal">Drawer Only Total:<label><br>
